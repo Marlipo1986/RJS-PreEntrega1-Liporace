@@ -2,3 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+.SeccionMenu {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 12px;
+}

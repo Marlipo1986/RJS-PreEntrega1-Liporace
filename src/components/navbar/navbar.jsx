@@ -1,11 +1,12 @@
+import "./navbar.css";
 import FoodBankIcon from '@mui/icons-material/FoodBank';
-import { AppBar, Toolbar, IconButton, Typography, Stack ,Button } from '@mui/material';
-
+import { AppBar, Toolbar, IconButton, Typography, Stack ,Button, Menu, MenuItem } from '@mui/material';
+import CartWidget from '../cartwidget/CartWidget';
 
 const MuiNavBar = () => {
   return (
     <AppBar position='static'>
-      <Toolbar>
+      <Toolbar >
         <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
           <FoodBankIcon/>
         </IconButton>
@@ -17,6 +18,7 @@ const MuiNavBar = () => {
         <Button color='inherit'>Menu</Button>
         <Button color='inherit'>Contacto</Button>
         </Stack>
+        <CartWidget/>
       </Toolbar>
     </AppBar>
   )
