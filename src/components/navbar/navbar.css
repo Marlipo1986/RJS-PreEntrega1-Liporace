@@ -2,12 +2,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
     min-height: 5vh;
-    border: 5px solid #fa8072;
+    border: 5px solid #aec3ae;
     }
-    Header h1,
-    h2 {
-    color: whitesmoke;
-    }
+    

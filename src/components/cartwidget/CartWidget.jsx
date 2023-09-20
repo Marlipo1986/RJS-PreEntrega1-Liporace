@@ -1,10 +1,11 @@
-import React from 'react';
-import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+
+import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 
 const CartWidget = () => {
   return (
-    <div className="cart-widget" fontSize="large">
-      <LocalAtmIcon />
+    <div className="cart-number" fontSize="large">
+      <DinnerDiningIcon alt='cart-widget'/>
+      17
     </div>
   );
 };

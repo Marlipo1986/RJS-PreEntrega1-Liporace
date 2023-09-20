@@ -5,7 +5,7 @@ import CartWidget from '../cartwidget/CartWidget';
 
 const MuiNavBar = () => {
   return (
-    <AppBar position='static'>
+    <AppBar className='Header' position='static' style={{ background: '#94A684' }}>
       <Toolbar >
         <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
           <FoodBankIcon/>
