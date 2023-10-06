@@ -1,7 +1,7 @@
 import "./navbar.css";
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import { AppBar, Toolbar, IconButton, Typography, Stack ,Button, Menu, MenuItem } from '@mui/material';
-import CartWidget from '../cartwidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 const MuiNavBar = () => {
   return (
