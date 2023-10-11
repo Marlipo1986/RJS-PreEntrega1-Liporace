@@ -4,9 +4,9 @@ const Item = ({nombre,imagen,precio,categoria,stock}) => {
     return (
         <article className='CardItem'>
             <header className='Header2'>
-                <h2 className='ItemHeader'>
+                <h5 className='ItemHeader'>
                     {nombre}
-                </h2>
+                </h5>
             </header>
             <picture>
                 <img src={imagen} alt={nombre} className='ItemImg'/>
@@ -23,7 +23,7 @@ const Item = ({nombre,imagen,precio,categoria,stock}) => {
                 </p>
             </section>
             <footer className='ItemFooter'>
-                <button className='Option'>Ver detalle</button>
+                <button className='Option btn btn-secondary'>Ver detalle</button>
             </footer>
         </article>
       )
