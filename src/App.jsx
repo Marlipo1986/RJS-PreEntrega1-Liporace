@@ -5,14 +5,15 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 //PAGES
-import Bebidas from "./pages/Bebidas";
-import Entradas from "./pages/Entradas";
-import PlatosPrincipales from "./pages/PlatosPrincipales";
-import Postres from "./pages/Postres";
-import Guarniciones from "./pages/Guarniciones";
+//import Bebidas from "./pages/Bebidas";
+//import Entradas from "./pages/Entradas";
+//import PlatosPrincipales from "./pages/PlatosPrincipales";
+//import Postres from "./pages/Postres";
+//import Guarniciones from "./pages/Guarniciones";
 import MenuCompleto from "./pages/MenuCompleto";
-import Comanda from "./pages/Comanda";
+//import Comanda from "./pages/Comanda";
 import NotFound from "./pages/NotFound";
+import DetallePlato from "./pages/DetallePlato";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Routes className="saludo">
           <Route path="/" element= {<MenuCompleto />} />
           <Route path="/MenuCompleto" element={<MenuCompleto/>} />
+          <Route path="/Detalle/:id" element={<DetallePlato/>} />
           {/* <Route path="/Entradas" element={<Entradas/>} />
           <Route path="/PlatosPrincipales" element={<PlatosPrincipales/>} />
           <Route path="/Guarniciones" element={<Guarniciones/>} />

@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
 
     useEffect(() => {
-        getProductById(15)
+        getProductById(1)
             .then(response => {
                 setProduct(response)
         })

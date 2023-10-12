@@ -1,3 +1,4 @@
+//Este JSX manejara lo relacionado al boton de comanda/carrito
 
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 

@@ -5,11 +5,3 @@
     justify-content: space-evenly;
     padding: 10px;
   }
-
-.LinkListGroup {
-  display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: space-evenly;
-    padding: 15px;
-}

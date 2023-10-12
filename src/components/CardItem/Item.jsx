@@ -1,6 +1,9 @@
+//Este JSX dara formato a cada Card que mostrara los platos
+
 import './Item.css'
 
-const Item = ({nombre,imagen,precio,categoria,stock}) => {
+
+const Item = ({id, nombre,imagen,precio,categoria,stock}) => {
     return (
         <article className='CardItem'>
             <header className='Header2'>
@@ -15,20 +18,21 @@ const Item = ({nombre,imagen,precio,categoria,stock}) => {
                 <p className='Info'>
                     Precio: ${precio}
                 </p>
-                <p className='Info'>
+                <p className='Info Oculto'>
                     Stock:{stock}
                 </p>
                 <p className='Info'>
                     {categoria}
                 </p>
+                <p className='Oculto'>{id}</p>
             </section>
             <footer className='ItemFooter'>
-                <button className='Option btn btn-secondary'>Ver detalle</button>
+                    <p className='Option btn btn-secondary'>Ver detalle</p>
             </footer>
         </article>
       )
 
-}
+};
 
 
   
