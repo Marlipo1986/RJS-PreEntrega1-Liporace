@@ -1,54 +1,46 @@
 import "./navbar.css";
 //import FoodBankIcon from '@mui/icons-material/FoodBank';
-import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import MenuCompleto from "../../pages/MenuCompleto";
+import PlatosPrincipales from "../../pages/PlatosPrincipales";
+import Guarniciones from "../../pages/Guarniciones";
+import Entradas from "../../pages/Entradas";
+import Postres from "../../pages/Postres";
+import Bebidas from "../../pages/Bebidas";
+import Comanda from "../../pages/Comanda";
 
 const NavBar = () => {
   return (
-    <nav className='Header'>
-      <h6>RESTAURAPP - del celu a tu mesa - PreEntrega React - Martin Liporace</h6>
+    <nav className="Header">
+      <h6>
+        RESTAURAPP - del celu a tu mesa - PreEntrega React - Martin Liporace
+      </h6>
       <ul className="listaNav">
-        <Link to="/">Menu Completo</Link>
-        <Link to="/">Entradas</Link>
-        <Link to="/">Platos Principales </Link>
-        <Link to="/">Guarniciones</Link>
-        <Link to="/">Postres</Link>
-        <Link to="/">Bebidas</Link>
+        <Link to="/MenuCompleto" element={<MenuCompleto />}>
+          Menu Completo
+        </Link>
+        <Link to="/Entradas" element={<Entradas />}>
+          Entradas
+        </Link>
+        <Link to="/PlatosPrincipales" element={<PlatosPrincipales />}>
+          Platos Principales{" "}
+        </Link>
+        <Link to="/Guarniciones" element={<Guarniciones />}>
+          Guarniciones
+        </Link>
+        <Link to="/Postres" element={<Postres />}>
+          Postres
+        </Link>
+        <Link to="/Bebidas" element={<Bebidas />}>
+          Bebidas
+        </Link>
+        <Link to="/Comanda" element={<Comanda />}>
+          Comanda {<CartWidget />}
+        </Link>
       </ul>
-      <span><CartWidget/></span>   
     </nav>
-    
-  )
-}
+  );
+};
 
-export default NavBar
-
-
-
-
-// <nav className='Header' position='static' style={{ background: '#94A684' }}>
-//       <Toolbar >
-//         <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-//           <FoodBankIcon/>
-//         </IconButton>
-//         <Typography variant='h6' component= 'div' sx={{flexGrow: 1}}>
-//           RESTAURAPP - del celu a tu mesa - PreEntrega React - Martin Liporace
-//         </Typography>
-//         <Stack direction='row' spacing={2}>
-//         <Link to="/">Inicio</link>
-//         <Link to="/Entradas" color='inherit'>Entradas</link>
-//         <Link to="/" color='inherit'>Platos Principales</link>
-//         <Link to="/" color='inherit'>Guarniciones</link>
-//         <Link to="/" color='inherit'>Postres</link>
-//         <Link to="/" color='inherit'>Bebidas</link>
-
-
-
-//         </Stack>
-//         <CartWidget/>
-//       </Toolbar>
-//     </AppBar>
-//   )
-// }
-
-// export default MuiNavBar
+export default NavBar;

@@ -1,50 +1,5 @@
-#carrito {
-    display: none;
-    position: fixed;
-    top: 10%;
-    right: 2%;
-    width: auto;
-    height: auto;
-    background-color: rgb(47, 255, 252);
-    z-index: 1001;
-    border-style: double;
-    text-align: left;
-  }
-  
-  #productos {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  
-  .barraBusqueda {
-    text-align: center;
-    align-items: center;
-  }
-  
-  .ItemImg {
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
-  }
-  
-  #agregar__producto {
-    display: none;
-  }
-  
-  .botones__admin {
-    margin-top: 12px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 12px
-  }
-
-  .CardItem{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    
-  }
+.CardItem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}

@@ -7,10 +7,12 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 //PAGES
 import Bebidas from "./pages/Bebidas";
 import Entradas from "./pages/Entradas";
-import Home from "./pages/Home";
 import PlatosPrincipales from "./pages/PlatosPrincipales";
 import Postres from "./pages/Postres";
 import Guarniciones from "./pages/Guarniciones";
+import MenuCompleto from "./pages/MenuCompleto";
+import Comanda from "./pages/Comanda";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -18,7 +20,15 @@ const App = () => {
       <div className="App">
           <NavBar />
         <Routes className="saludo">
-          <Route path="/" element= {<Home />} />
+          <Route path="/" element= {<MenuCompleto />} />
+          <Route path="/MenuCompleto" element={<MenuCompleto/>} />
+          {/* <Route path="/Entradas" element={<Entradas/>} />
+          <Route path="/PlatosPrincipales" element={<PlatosPrincipales/>} />
+          <Route path="/Guarniciones" element={<Guarniciones/>} />
+          <Route path="/Postres" element={<Postres/>} />
+          <Route path="/Bebidas" element={<Bebidas/>} />
+          <Route path="/Comanda" element={<Comanda/>} /> */}
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       
     </div>
