@@ -260,10 +260,13 @@ export const getProducts = () => {
   });
 };
 
-export const getProductById = (productId) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(products.find((prod) => prod.id === productId));
-    }, 500);
+export const getProductById = (id) => {
+  return new Promise((resolve, reject) => {
+    const product = products.find(product => product.id === parseInt(id));
+    if (product) {
+      resolve(product);
+    } else {
+      reject(new Error('Product not found'));
+    }
   });
 };
