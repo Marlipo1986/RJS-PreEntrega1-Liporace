@@ -1,9 +1,10 @@
-//Este JSX dara formato a cada Card que mostrara los platos
+//Este JSX dara formato a cada Card que mostrara los platos en el home
+
 
 import './Item.css'
 
 
-const Item = ({id, nombre,imagen,precio,categoria,stock}) => {
+const Item = ({id,  nombre,imagen,precio,categoria,stock}) => {
     return (
         <article className='CardItem'>
             <header className='Header2'>

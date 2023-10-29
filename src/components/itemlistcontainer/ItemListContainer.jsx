@@ -1,25 +1,39 @@
 import { useState, useEffect } from 'react';
-import {getProducts} from '../../assets/db';
-import ItemList from '../ItemList/ItemList';
+import {products} from '../../assets/db';
+import ItemList from './ItemList';
+import { useParams } from 'react-router-dom';
 
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     
-    const [products, setProducts] = useState([])
+    const [product, setProducts] = useState([])
+
+    const {tipoDePlato} = useParams()
+    console.log(tipoDePlato ? "estoy intentando filtrar" : "no filtro nada")
+
 
     useEffect(() => {
-        getProducts()
-            .then(response => {
-                setProducts(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }),[]
+
+    const prodFiltrado = products.filter (product =>product.categoria === tipoDePlato)
+    const recupero = new Promise ((resolve) =>{
+        resolve(tipoDePlato ? prodFiltrado : products);
+    });
+    recupero.then((res) => setProducts(res)).catch((error)=> console.log(error));
+},[tipoDePlato]);
+        
+
+// getProducts()
+//             .then(response => {
+//                 setProducts(response)
+//             })
+//             .catch(error => {
+//                 console.error(error)
+//             })
+//     }),[]
     return(
         <div>
-        <ItemList products={products}/>
+        <ItemList products={product}/>
         </div>
         
         

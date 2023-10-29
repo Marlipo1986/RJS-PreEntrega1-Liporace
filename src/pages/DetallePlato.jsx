@@ -7,7 +7,7 @@ import ItemCount from "../components/ItemCount/ItemCount";
 const DetallePlato = () => {
   let { id } = useParams();
 
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState({});
 
   useEffect(() => {
     getProductById(id)
@@ -18,8 +18,6 @@ const DetallePlato = () => {
         console.error(error);
       });
   }, [id]);
-
-  console.log(product);
 
   return (
     <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>

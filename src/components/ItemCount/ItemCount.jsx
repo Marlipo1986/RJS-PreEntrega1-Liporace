@@ -3,9 +3,9 @@
 import './ItemCount.css';
 import { useState } from 'react';
 
-const ItemCount = ({ stock,initial,onAdd }) => {
+const ItemCount = ({ stock, onAdd }) => {
   
-  const [quantity,setQuantity] = useState(initial)
+  const [quantity,setQuantity] = useState(1)
   
   const increment = () => {
     if(quantity <= stock) {

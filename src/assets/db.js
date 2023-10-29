@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: 1,
     nombre: "Sopa de cebolla",
@@ -45,7 +45,7 @@ const products = [
     nombre: "Spaghetti con Crema",
     precio: 550,
     imagen: "https://cdn7.kiwilimon.com/brightcove/9417/640x640/9417.jpg.webp",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion: "El tamaño de un plato de bodegon servido en tu mesa"
   },
@@ -55,7 +55,7 @@ const products = [
     precio: 650,
     imagen:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWsL2SumXGbJ9rlSU_7k7BIbNgZ59OZH_rKQ&usqp=CAU",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion: "Tan exotico como delicioso"
   },
@@ -65,7 +65,7 @@ const products = [
     precio: 550,
     imagen:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbMq7OINc59s3jknT-xPvUYHG6SM3skCosg&usqp=CAU",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion: "Para los que nos visitaron frecuentemente y ahora se encuentren a dieta"
   },
@@ -74,7 +74,7 @@ const products = [
     nombre: "Trucha al limón",
     precio: 750,
     imagen: "https://i.ytimg.com/vi/ROiDtrpciQc/maxresdefault.jpg",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion: "Elaborado para paladares finos"
   },
@@ -84,7 +84,7 @@ const products = [
     precio: 650,
     imagen:
       "https://img-global.cpcdn.com/recipes/0d9abe6c679d2cba/680x482cq70/risotto-de-hongos-foto-principal.jpg",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion: "Exquisito plato para combatir el frio como lo hacen en Italia"
   },
@@ -94,7 +94,7 @@ const products = [
     precio: 780,
     imagen:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJJG7Ked6WVjwU6-6Qrbb1PHjVQ-PCXMRCpg&usqp=CAU",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
     descripcion:"Un clasico de Buenos Aires"
   },
@@ -104,7 +104,7 @@ const products = [
     precio: 750,
     imagen:
       "https://cdn.tasteatlas.com/images/dishes/b05a0af72ad845f3a6abe16143d7853a.jpg?mw=1300",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
   },
   {
@@ -247,7 +247,7 @@ const products = [
     precio: 620,
     imagen:
       "https://media-cdn.tripadvisor.com/media/photo-s/06/b7/59/b9/ravioles-de-pollo-y-verdura.jpg",
-    categoria: "Platos Principales",
+    categoria: "Principales",
     stock: 30,
   },
 ];

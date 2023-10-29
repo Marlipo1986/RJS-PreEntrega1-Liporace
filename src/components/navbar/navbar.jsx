@@ -1,46 +1,45 @@
-import "./navbar.css";
-//import FoodBankIcon from '@mui/icons-material/FoodBank';
-import CartWidget from "../CartWidget/CartWidget";
-import { Link } from "react-router-dom";
-import MenuCompleto from "../../pages/MenuCompleto";
-import PlatosPrincipales from "../../pages/PlatosPrincipales";
-import Guarniciones from "../../pages/Guarniciones";
-import Entradas from "../../pages/Entradas";
-import Postres from "../../pages/Postres";
-import Bebidas from "../../pages/Bebidas";
-import Comanda from "../../pages/Comanda";
+import "./Navbar.css";
+import CartWidget from "./CartWidget/CartWidget";
+import { Link, Outlet } from "react-router-dom";
+//import Comanda from "../../pages/Comanda";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <nav className="Header">
-      <h6>
-        RESTAURAPP - del celu a tu mesa - PreEntrega React - Martin Liporace
-      </h6>
-      <ul className="listaNav">
-        <Link to="/MenuCompleto" element={<MenuCompleto />}>
-          Menu Completo
+    <>
+      <nav className="Header">
+        <Link to="/MenuCompleto">
+        <h5>
+          RESTAURAPP - del celu a tu mesa - Trabajo Final React - Martin Liporace
+        </h5>
         </Link>
-        <Link to="/Entradas" element={<Entradas />}>
-          Entradas
-        </Link>
-        <Link to="/PlatosPrincipales" element={<PlatosPrincipales />}>
-          Platos Principales{" "}
-        </Link>
-        <Link to="/Guarniciones" element={<Guarniciones />}>
-          Guarniciones
-        </Link>
-        <Link to="/Postres" element={<Postres />}>
-          Postres
-        </Link>
-        <Link to="/Bebidas" element={<Bebidas />}>
-          Bebidas
-        </Link>
-        <Link to="/Comanda" element={<Comanda />}>
-          Comanda {<CartWidget />}
-        </Link>
-      </ul>
-    </nav>
+        <ul className="listaNav">
+          <Link to="/MenuCompleto">
+            Menu Completo
+          </Link>
+          <Link to="/Categoria/Entradas">
+            Entradas
+          </Link>
+          <Link to="/Categoria/Principales">
+            Platos Principales{" "}
+          </Link>
+          <Link to="/Categoria/Guarniciones">
+            Guarniciones
+          </Link>
+          <Link to="/Categoria/Postres">
+            Postres
+          </Link>
+          <Link to="/Categoria/Bebidas">
+            Bebidas
+          </Link>
+          <Link to="/Comanda">
+            {<CartWidget />}
+          </Link>
+        </ul>
+      </nav>
+
+      <Outlet />
+    </>
   );
 };
 
-export default NavBar;
+export default Navbar;
