@@ -6,7 +6,7 @@ export const products = [
     imagen:
       "https://images.hola.com/imagenes/cocina/recetas/20191115153963/sopa-cebolla-gratinada-queso/0-745-600/sopa-cebolla-adobe-t.jpg?tx=w_1200",
     categoria: "Entradas",
-    stock: 30,
+    stock: 5,
     descripcion: "Exquisita sopa suave y cremosa de mix de cebollas y crema",
   },
   {
