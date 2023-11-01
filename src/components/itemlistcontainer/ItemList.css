@@ -22,10 +22,10 @@
   }
 
   .grid {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 5px;
-    width: 100%;
+    gap: 10px;
+    max-width: 98%;
   
   }

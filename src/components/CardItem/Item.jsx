@@ -13,9 +13,9 @@ import "./Item.css";
 const Item = ({ product }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 325 }}>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ minHeight: 250 }}
           image={product.imagen}
           title={`image ${product.nombre}`}
         />
