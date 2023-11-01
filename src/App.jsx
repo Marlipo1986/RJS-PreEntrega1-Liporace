@@ -1,18 +1,15 @@
 import "./app.css";
 import { BrowserRouter as Router } from "react-router-dom";
-
-//PAGES
-
 import AppRouter from "./router/AppRouter";
-import { CartProvider } from "./context/CartContext";
+import { DataProvider } from "./context/DataContext";
 
 const App = () => {
   return (
+    <DataProvider>
     <Router>
-      <CartProvider>
         <AppRouter />
-      </CartProvider>
     </Router>
+    </DataProvider>
   );
 };
 

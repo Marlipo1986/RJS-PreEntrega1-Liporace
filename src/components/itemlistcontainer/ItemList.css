@@ -1,7 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .ListGroup {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
     justify-content: space-evenly;
     padding: 10px;
+  }
+
+  .ItemList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+    width: 100%;
+  
   }

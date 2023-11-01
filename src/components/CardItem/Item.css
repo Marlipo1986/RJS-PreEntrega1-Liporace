@@ -1,9 +1,4 @@
-.CardItem {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
 .Oculto {
   display: none;
 }
+

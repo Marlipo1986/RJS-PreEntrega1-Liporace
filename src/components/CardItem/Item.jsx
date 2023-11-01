@@ -1,40 +1,44 @@
 //Este JSX dara formato a cada Card que mostrara los platos en el home
 
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import "./Item.css";
 
-import './Item.css'
-
-
-const Item = ({id,  nombre,imagen,precio,categoria,stock}) => {
-    return (
-        <article className='CardItem'>
-            <header className='Header2'>
-                <h5 className='ItemHeader'>
-                    {nombre}
-                </h5>
-            </header>
-            <picture>
-                <img src={imagen} alt={nombre} className='ItemImg'/>
-            </picture>
-            <section>
-                <p className='Info'>
-                    Precio: ${precio}
-                </p>
-                <p className='Info Oculto'>
-                    Stock:{stock}
-                </p>
-                <p className='Info'>
-                    {categoria}
-                </p>
-                <p className='Oculto'>{id}</p>
-            </section>
-            <footer className='ItemFooter'>
-                    <p className='Option btn btn-secondary'>Ver detalle</p>
-            </footer>
-        </article>
-      )
-
+const Item = ({ product }) => {
+  return (
+    <>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          sx={{ height: 140 }}
+          image={product.imagen}
+          title={`image ${product.nombre}`}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h4" component="div">
+            {product.nombre}
+          </Typography>
+          <Typography variant="h6" color="text.secondary" className="Oculto">
+            {product.descripcion}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            $ {product.precio} .-
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" variant="outlined">
+            Ver detalle
+          </Button>
+        </CardActions>
+      </Card>
+    </>
+  );
 };
 
+export default Item;
 
-  
-export default Item

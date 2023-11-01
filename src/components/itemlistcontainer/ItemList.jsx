@@ -1,17 +1,18 @@
-import "./ItemList.css";
 import Item from "../CardItem/Item";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import DataContext from "../../context/DataContext";
+import "./ItemList.css";
 
-const ItemList = ({ products }) => {
-  return (
-    <div className="ListGroup">
-      {products.map((prod) => (
-        <Link to={`/Detalle/${prod.id}`} key={prod.id}>
-          <Item {...prod} />
-        </Link>
-      ))}
-    </div>
-  );
+const ItemList = () => {
+  const { data } = useContext(DataContext);
+  return data.map((product) => {
+    return (
+      <div className="ListGroup" key={product.id}>
+          <Item product={product} />
+      </div>
+    );
+  });
 };
 
 export default ItemList;
+

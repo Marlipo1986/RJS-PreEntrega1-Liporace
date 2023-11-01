@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { products } from "../../assets/db";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import "./ItemList.css"
 
 const ItemListContainer = () => {
   const [product, setProducts] = useState([]);
@@ -22,7 +23,7 @@ const ItemListContainer = () => {
   }, [tipoDePlato]);
 
   return (
-    <div>
+    <div className="grid">
       <ItemList products={product} />
     </div>
   );

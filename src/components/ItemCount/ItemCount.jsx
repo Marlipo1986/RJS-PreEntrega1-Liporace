@@ -1,5 +1,3 @@
-//Este JSX servira para agregar platos al carrito
-
 import "./ItemCount.css";
 import { useState } from "react";
 
