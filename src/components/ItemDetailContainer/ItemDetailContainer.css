@@ -1,7 +1,0 @@
-.ItemDetailContainer {
-    display: flex;
-    background-color: whitesmoke;
-    justify-content: center;
-    border-style: dotted;
-    flex-direction: row;
-}

@@ -1,17 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "../components/NavBar/navbar";
-import NotFound from "../pages/NotFound";
+import Layout from "../components/layout/Layout";
 import { routes } from "./menuRoutes";
 
+
 const AppRouter = () => {
+
   return (
     <Routes>
-      <Route element={<Navbar />}>
+      <Route element={<Layout />}>
         {routes.map(({ id, path, Element }) => {
           return <Route key={id} path={path} element={<Element />} />;
         })}
       </Route>
-      <Route path="*" element={<NotFound />} />
+
+      <Route path="*" element={<h1>Not found</h1>} />
     </Routes>
   );
 };

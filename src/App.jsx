@@ -1,29 +1,15 @@
-import "./app.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./router/AppRouter";
-import { DataProvider } from "./context/DataContext";
+import CartContextComponent from "./context/CartContext";
 
-const App = () => {
+function App() {
   return (
-    <DataProvider>
-    <Router>
+    <BrowserRouter>
+      <CartContextComponent>
         <AppRouter />
-    </Router>
-    </DataProvider>
+      </CartContextComponent>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
-
-{
-  /* <Routes className="saludo">
-        <Route element={<Navbar />}>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/MenuCompleto" element={<ItemListContainer />} />
-          <Route path="/Detalle/:id" element={<DetallePlato />} />
-          <Route path="/Categoria/:tipoDePlato" element={<ItemListContainer/>}/>
-          <Route path="/Comanda" element={<Comanda/>} /> 
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>*/
-}

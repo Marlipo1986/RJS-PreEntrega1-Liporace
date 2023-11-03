@@ -1,31 +1,33 @@
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
-import Comanda from "../pages/Comanda";
-import DetallePlato from "../pages/DetallePlato";
+import Cart from "../components/pages/cart/cart";
+import CheckoutOficial from "../components/pages/checkoutOficial/CheckoutOficial";
+import ItemDetailContainer from "../components/pages/ItemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "../components/pages/ItemListContainer/ItemListContainer";
 
 export const routes = [
     {
         id: "home",
-        path: "/",
-        Element: ItemListContainer ,
+        path: "/" ,
+        Element: ItemListContainer  ,
     },
     {
-        id:"menuCompleto",
-        path: "/MenuCompleto",
-        Element: ItemListContainer,
+        id: "category",
+        path: "/category/:categoryName",
+        Element : ItemListContainer 
     },
     {
-        id:"detallePlato",
-        path: "/Detalle/:id",
-        Element: DetallePlato,
+        id: "cart",
+        path: "/cart",
+        Element : Cart
     },
     {
-        id:"tipoDePlato",
-        path: "/Categoria/:tipoDePlato",
-        Element: ItemListContainer,
+        id: "detalle",
+        path: "/itemDetail/:id",
+        Element : ItemDetailContainer
     },
     {
-        id:"comanda",
-        path: "/Comanda",
-        Element: Comanda,
+        id: "checkout",
+        path: "/checkout",
+        Element : CheckoutOficial
     },
+   
 ]
